@@ -39,10 +39,10 @@ router.post('/login', async (req,res) => {
         const validated = await bcrypt.compare(req.body.password, user.password)
         !validated && res.status(422).json("Incorrect Password")
 
-        const { password, ...others } = user._doc;
+        const { password, ...user_detail } = user._doc;
         return res.status(200).json(
             {
-                others,
+                user_detail,
                 message:"logged in successfully"
             }
         );
