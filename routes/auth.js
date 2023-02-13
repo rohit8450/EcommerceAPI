@@ -4,6 +4,7 @@ const User = require('../models/User');
 const bcrypt = require("bcrypt");
 
 
+
 // regisret API
 
 router.post('/register', async (req,res) => {
@@ -52,5 +53,6 @@ router.post('/login', async (req,res) => {
     
 
     });
+
 
 module.exports = router;
