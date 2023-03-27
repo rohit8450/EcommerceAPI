@@ -32,7 +32,8 @@ module.exports.create = async (req, res) => {
             })
             
           }else{
-            return res.status(200).json({product,
+            return res.status(200).json({
+              product,
                 message:"Products displayed successfully"})
           }
           

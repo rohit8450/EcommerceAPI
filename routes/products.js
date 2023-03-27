@@ -1,8 +1,4 @@
 const router = require('express').Router();
-const User = require('../models/Product');
-const bcrypt = require("bcrypt");
-const Product = require('../models/Product');
-const { find } = require('../models/Product');
 const productsController = require('../controller/productsController');
 
 
@@ -10,7 +6,7 @@ const productsController = require('../controller/productsController');
 router.post("/create", productsController.create);
 
  // Get All products API with Search
- router.get("getAllDetails", productsController.getAllProductDetails);
+ router.get("/getAllDetails", productsController.getAllProductDetails);
 
 
     
