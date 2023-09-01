@@ -3,13 +3,16 @@ const User = require("../models/User");
 // Updete user profile
 module.exports.update = async (req, res) => {
 
-    let {id } = req.body.userId;
-    console.log(req.body.userId);
+    let { userId } = req.body;
+
+    console.log(userId);
  
  
    try {
  
-     const user = await User.findOne({userId:id});
+     const user = await User.findOne({userId:userId});
+
+     console.log(user);
  
      if(user){
          if(req.body.password){
