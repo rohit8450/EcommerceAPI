@@ -6,7 +6,7 @@ const productsController = require('../controller/productsController');
 router.post("/create", productsController.create);
 
  // Get All products API with Search
- router.get("/getAllDetails", productsController.getAllProductDetails);
+ router.get("/getAllDetails/:category", productsController.getAllProductDetails);
 
 
     

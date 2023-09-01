@@ -7,9 +7,10 @@ module.exports.create = async (req, res) => {
 
         try {
             const savedProduct = await newProduct.save();
-            res.status(200).json({savedProduct,
+            return res.status(200).json({savedProduct,
             message: "product created successfully"})
         } catch (error) {
+          console.log(error);
             res.status(500).json({error,
             message:"error occured while creating product"})
         }
